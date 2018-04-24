@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=tele
+Comment=tele P2P Cryptocurrency
+Comment[fr]=tele, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=tele, eşten eşe kriptografik sanal para birimi
+Exec=tele-qt %u
+Terminal=false
+Type=Application
+Icon=tele128
+MimeType=x-scheme-handler/tele;
+Categories=Office;Finance;

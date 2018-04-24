@@ -1,0 +1,26 @@
+# /etc/conf.d/teled: config file for /etc/init.d/teled
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/tele/tele.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/teled"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/teled.pid"
+
+# Where to write teled data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/teled"
+
+# User and group to own teled process
+#BITCOIND_USER="tele"
+#BITCOIND_GROUP="tele"
+
+# Path to teled executable
+#BITCOIND_BIN="/usr/bin/teled"
+
+# Nice value to run teled under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

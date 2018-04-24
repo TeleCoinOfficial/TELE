@@ -37,7 +37,7 @@ SplashScreen::SplashScreen(Qt::WindowFlags f, const NetworkStyle* networkStyle) 
     QString versionText = QString(tr("Version %1")).arg(QString::fromStdString(FormatFullVersion()));
     QString copyrightTextBtc = QChar(0xA9) + QString(" 2009-%1 ").arg(COPYRIGHT_YEAR) + QString(tr("The Bitcoin Core developers"));
     QString copyrightTextDash = QChar(0xA9) + QString(" 2014-%1 ").arg(COPYRIGHT_YEAR) + QString(tr("The Dash Core developers"));
-    QString copyrightTexttele = QChar(0xA9) + QString(" 2015-%1 ").arg(COPYRIGHT_YEAR) + QString(tr("The Tele developers"));
+    QString copyrightTexttele = QChar(0xA9) + QString(" 2017-%1 ").arg(COPYRIGHT_YEAR) + QString(tr("The Tele developers"));
     QString titleAddText = networkStyle->getTitleAddText();
 
     QString font = QApplication::font().toString();
@@ -46,10 +46,10 @@ SplashScreen::SplashScreen(Qt::WindowFlags f, const NetworkStyle* networkStyle) 
     pixmap = networkStyle->getSplashImage();
 
     QPainter pixPaint(&pixmap);
-    pixPaint.setPen(QColor(100, 100, 100));
+    pixPaint.setPen(QColor(0, 0, 0));
 
     // check font size and drawing with
-    pixPaint.setFont(QFont(font, 28 * fontFactor));
+    pixPaint.setFont(QFont(font, 15 * fontFactor));
     QFontMetrics fm = pixPaint.fontMetrics();
     int titleTextWidth = fm.width(titleText);
     if (titleTextWidth > 160) {

@@ -35,10 +35,10 @@ def check_json_precision():
 def determine_db_dir():
     """Return the default location of the tele data directory"""
     if platform.system() == "Darwin":
-        return os.path.expanduser("~/Library/Application Support/TELE/")
+        return os.path.expanduser("~/Library/Application Support/teleV2/")
     elif platform.system() == "Windows":
-        return os.path.join(os.environ['APPDATA'], "TELE")
-    return os.path.expanduser("~/.tele")
+        return os.path.join(os.environ['APPDATA'], "teleV2")
+    return os.path.expanduser("~/.teleV2")
 
 def read_bitcoin_config(dbdir):
     """Read the tele.conf file from dbdir, returns dictionary of settings"""

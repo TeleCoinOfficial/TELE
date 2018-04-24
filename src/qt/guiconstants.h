@@ -48,8 +48,8 @@ static const int MAX_URI_LENGTH = 255;
 /* Number of frames in spinner animation */
 #define SPINNER_FRAMES 35
 
-#define QAPP_ORG_NAME "tele"
-#define QAPP_ORG_DOMAIN "www.Tele.team"
+#define QAPP_ORG_NAME "Tele"
+#define QAPP_ORG_DOMAIN "www.Tele.org"
 #define QAPP_APP_NAME_DEFAULT "tele-Qt"
 #define QAPP_APP_NAME_TESTNET "tele-Qt-testnet"
 

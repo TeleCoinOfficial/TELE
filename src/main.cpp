@@ -1612,8 +1612,11 @@ double ConvertBitsToDouble(unsigned int nBits)
 
 int64_t GetBlockValue(int nHeight, CAmount nFees, bool fBudgetBlock)
 {
+    int64_t nBudgetMultiplier = COIN;
+    if (!fBudgetBlock)
+        nBudgetMultiplier = COIN - (Params().GetBudgetPercent() * CENT);
 
-
+    CAmount nSubsidy = 1 * nBudgetMultiplier; // Default PoS reward
 
 	    if (nHeight == 1){
             return CAmount(15500000) * COIN;
@@ -1621,11 +1624,8 @@ int64_t GetBlockValue(int nHeight, CAmount nFees, bool fBudgetBlock)
 		else if (nHeight > 1 && nHeight <= Params().LAST_POW_BLOCK()){
             return nFees;
         }
-        else {
-         return CAmount(1) * COIN; // Low PoW block reward to help up the network	
-        }
         
-    // return nSubsidy + nFees;
+    return nSubsidy + nFees;
 }
 
 int64_t GetMasternodePayment(CAmount nTotalBlockReward)

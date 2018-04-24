@@ -3207,8 +3207,8 @@ https://www.transifex.com/tele-project/tele-project-translations</translation>
         <translation>Copyright (C) 2014-%i Разработчики Dash Core</translation>
     </message>
     <message>
-        <source>Copyright (C) 2015-%i The TELE Developers</source>
-        <translation>Copyright (C) 2015-%i Разработчики COLX Core</translation>
+        <source>Copyright (C) 2017-%i The TELE Developers</source>
+        <translation>Copyright (C) 2017-%i Разработчики COLX Core</translation>
     </message>
     <message>
         <source>Corrupted block database detected</source>

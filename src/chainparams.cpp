@@ -185,9 +185,9 @@ public:
         //vSeeds.push_back(CDNSSeedData("107.191.45.64", "107.191.45.64")); 
 	//vSeeds.push_back(CDNSSeedData("144.202.65.252", "144.202.65.252"));
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 51);
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 0x30);
-        base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 0xff);
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 66);
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 85);
+        base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 153);
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(17)(76)(58)(103).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(17)(7)(6)(26).convert_to_container<std::vector<unsigned char> >();
         // 	BIP44 coin type is from https://github.com/satoshilabs/slips/blob/master/slip-0044.md

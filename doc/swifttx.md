@@ -12,8 +12,8 @@ When a "Transaction Lock" occurs the hash of the related transaction is broadcas
 * `zmqpubhashtxlock`: publishes the transaction hash when locked via SwiftTX
 
 This mechanism has been integrated into Bitcore-Node-tele which allows for notification to be broadcast through Insight API in one of two ways:
-* WebSocket: [https://github.com/TeleTeam/tele/insight-api-tele#web-socket-api](https://github.com/TeleTeam/tele/insight-api-tele#web-socket-api)
-* API: [https://github.com/TeleTeam/tele/insight-api-tele#swifttx-transactions](https://github.com/TeleTeam/tele/insight-api-tele#swifttx-transactions)
+* WebSocket: [https://github.com/mammix2/tele/insight-api-tele#web-socket-api](https://github.com/mammix2/tele/insight-api-tele#web-socket-api)
+* API: [https://github.com/mammix2/tele/insight-api-tele#swifttx-transactions](https://github.com/mammix2/tele/insight-api-tele#swifttx-transactions)
 
 ####Command line option
 

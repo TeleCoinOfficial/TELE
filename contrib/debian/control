@@ -23,8 +23,8 @@ Build-Depends: debhelper,
  libprotobuf-dev, protobuf-compiler
 Standards-Version: 3.9.2
 Homepage: https://Tele.team
-Vcs-Git: git://github.com/TeleTeam/tele.git
-Vcs-Browser: http://github.com/TeleTeam/tele
+Vcs-Git: git://github.com/mammix2/tele.git
+Vcs-Browser: http://github.com/mammix2/tele
 
 Package: teled
 Architecture: any

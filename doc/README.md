@@ -41,7 +41,7 @@ The following are developer notes on how to build TELE on your native platform. 
 
 Development
 ---------------------
-The tele repo's [root README](https://github.com/TeleTeam/tele/tele/blob/master/README.md) contains relevant information on the development process and automated testing.
+The tele repo's [root README](https://github.com/mammix2/tele/tele/blob/master/README.md) contains relevant information on the development process and automated testing.
 
 - [Developer Notes](developer-notes.md)
 - [Multiwallet Qt Development](multiwallet-qt.md)

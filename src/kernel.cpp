@@ -1,7 +1,7 @@
 /* @flow */
 // Copyright (c) 2012-2013 The PPCoin developers
 // Copyright (c) 2015 The HyperStake developers
-// Copyright (c) 2016-2017 The Tele Team developers
+// Copyright (c) 2016-2017 The Tele developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 

@@ -7,7 +7,7 @@ architectures:
 packages:
 - "faketime"
 remotes:
-- "url": "https://github.com/TeleTeam/tele/tele-detached-sigs.git"
+- "url": "https://github.com/mammix2/tele/tele-detached-sigs.git"
   "dir": "signature"
 files:
 - "tele-osx-unsigned.tar.gz"

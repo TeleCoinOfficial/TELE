@@ -1616,16 +1616,16 @@ int64_t GetBlockValue(int nHeight, CAmount nFees, bool fBudgetBlock)
 //    if (!fBudgetBlock)
 //        nBudgetMultiplier = COIN - (Params().GetBudgetPercent() * CENT);
 
-
+		CAmount nSubsidy;
 	
 	    if (nHeight == 1){
-            return CAmount(15500000) * COIN;
+            return nSubsidy(15500000) * COIN;
         }
 		else if (nHeight > 1 && nHeight <= Params().LAST_POW_BLOCK()){
             return nFees;
         }
         else {
-         return CAmount(1) * COIN; // Low PoW block reward to help up the network	
+         return nSubsidy(1) * COIN; // Low PoW block reward to help up the network	
         }
         
     return nSubsidy + nFees;

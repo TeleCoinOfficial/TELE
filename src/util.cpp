@@ -423,7 +423,7 @@ boost::filesystem::path GetDefaultDataDir()
 // Unix: ~/.tele
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "tele";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "teleV2";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -435,10 +435,10 @@ boost::filesystem::path GetDefaultDataDir()
     // Mac
     pathRet /= "Library/Application Support";
     TryCreateDirectory(pathRet);
-    return pathRet / "tele";
+    return pathRet / "teleV2";
 #else
     // Unix
-    return pathRet / ".tele";
+    return pathRet / ".teleV2";
 #endif
 #endif
 }

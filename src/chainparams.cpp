@@ -154,8 +154,8 @@ public:
         nModifierIntervalRatio = 3;
         //nBudgetPercent = 5;
         nMinStakeAge = 60*60*8; // 8 Hours
-        nMasternodeRewardPercent = 60; // % of block reward that goes to masternodes
-        nRequiredMasternodeCollateral = 5000 * COIN;
+        nMasternodeRewardPercent = 60; // 60 % of block reward that goes to masternodes
+        nRequiredMasternodeCollateral = 10000 * COIN;
 
         const char* pszTimestamp = "BBC News 23-April-2018: Stephen Lawrence Day to be held annually";
         CMutableTransaction txNew;

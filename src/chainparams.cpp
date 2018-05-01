@@ -134,7 +134,7 @@ public:
         pchMessageStart[1] = 0xc5;
         pchMessageStart[2] = 0xfE;
         pchMessageStart[3] = 0xe0;
-        vAlertPubKey = ParseHex("0000098d3ba6ba6e7423fa5cbd6a89e0a9a5348f88d332b44a5cb1a8b7ed2c1eaa335fc8dc4f012cb8241cc0bdafd6ca70c5f5448916e4e6f511bcd746ed57dc50");
+        vAlertPubKey = ParseHex("0465b73205eadd3fb3bb2fc7b585d96320d99b56bb605634399f2d4008d3e3261f180bda35ba83a17089284850ff734440ae624fd49960a28a5aca60a51562591f");
         nDefaultPort = 11568;
         bnProofOfWorkLimit = ~uint256(0) >> 20; // tele starting difficulty is 1 / 2^12
         nSubsidyHalvingInterval = 210000;
@@ -163,7 +163,7 @@ public:
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 486604799 << CScriptNum(4) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
         txNew.vout[0].nValue = 5654 * COIN;
-        txNew.vout[0].scriptPubKey = CScript() << ParseHex("04fbc0c407fb2e6d3b18f686f49f19fc58a3790b1770188d6512b2cf8cd534ba194dddbecd52e582abb8a119638aad6ca1ae31f4646a0ef2715119ab70320d4c13") << OP_CHECKSIG;
+        txNew.vout[0].scriptPubKey = CScript() << ParseHex("04727863a84ee21fb97b34c4bb24b019141306567c4637c5b0bae1ea3d08087c43d5ea7d5508dd743f641db6dac904852dc33619cc4613fb17a3639e594e14e765") << OP_CHECKSIG;
         genesis.vtx.push_back(txNew);
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
@@ -207,7 +207,7 @@ public:
 
         nPoolMaxTransactions = 3;
 
-        strSporkKey = "04B433E6598390C992F4F022F20D3B4CBBE691652EE7C48243B81701CBDB7CC7D7BF0EE09E154E6FCBF2043D65AF4E9E97B89B5DBAF830D83B9B7F469A6C45A717";
+        strSporkKey = "0464f9fcf86f669cb57478dea66105f945b03228d2b9eaffb202cbcae0d55987422242fd5b3604525735fdffa379aa2884fa47e964476004e7a236aaaa36aad180";
         strObfuscationPoolDummyAddress = "D87q2gC9j6nNrnzCsg4aY6bHMLsT9nUhEw";
         nStartMasternodePayments = fGenTime;
     }
@@ -233,7 +233,7 @@ public:
         pchMessageStart[1] = 0x8b;
         pchMessageStart[2] = 0x6a;
         pchMessageStart[3] = 0x7e;
-        vAlertPubKey = ParseHex("04cd195b65e689d6b3d68b921c62c1f6cac549c82926236f57faa60b3dfbd714f7b378c5eb8e2ae1ed89e6e81eba4af4232703e26af8b275449ec00fbba0a1201b");
+        vAlertPubKey = ParseHex("0412dc4793b2ec5602f0b2e36fa0852a4645a2686297bb470727be548f619afbb9c1cef2320540f277530f932e7eaae0816c90ee38363af044ab7b68077d3acaf0");
         nDefaultPort = 21568;
         nEnforceBlockUpgradeMajority = 51;
         nRejectBlockOutdatedMajority = 75;
@@ -281,7 +281,7 @@ public:
         fTestnetToBeDeprecatedFieldRPC = true;
 
         nPoolMaxTransactions = 2;
-        strSporkKey = "04348C2F50F90267E64FACC65BFDC9D0EB147D090872FB97ABAE92E9A36E6CA60983E28E741F8E7277B11A7479B626AC115BA31463AC48178A5075C5A9319D4A38";
+        strSporkKey = "0464f9fcf86f669cb57478dea66105f945b03228d2b9eaffb202cbcae0d55987422242fd5b3604525735fdffa379aa2884fa47e964476004e7a236aaaa36aad180";
         strObfuscationPoolDummyAddress = "y57cqfGRkekRyDRNeJiLtYVEbvhXrNbmox";
         nStartMasternodePayments = fGenTime;
     }

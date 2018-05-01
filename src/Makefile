@@ -108,29 +108,29 @@ DIST_COMMON = $(srcdir)/Makefile.test.include \
 	$(srcdir)/Makefile.am $(top_srcdir)/build-aux/depcomp \
 	$(am__include_HEADERS_DIST) \
 	$(top_srcdir)/build-aux/test-driver
-am__append_16 = test/test_tele test/bitcoin-util-test.py
-am__append_17 = test/test_tele
-am__append_18 = \
-	test/bctest.py \
-	test/bitcoin-util-test.py \
-	test/data/bitcoin-util-test.json \
-	test/data/blanktx.hex \
-	test/data/tt-delin1-out.hex \
-	test/data/tt-delout1-out.hex \
-	test/data/tt-locktime317000-out.hex \
-	test/data/tx394b54bb.hex \
-	test/data/txcreate1.hex \
-	test/data/txcreate2.hex \
-	test/data/txcreatesign.hex
+#am__append_16 = test/test_tele test/bitcoin-util-test.py
+#am__append_17 = test/test_tele
+#am__append_18 = \
+#	test/bctest.py \
+#	test/bitcoin-util-test.py \
+#	test/data/bitcoin-util-test.json \
+#	test/data/blanktx.hex \
+#	test/data/tt-delin1-out.hex \
+#	test/data/tt-delout1-out.hex \
+#	test/data/tt-locktime317000-out.hex \
+#	test/data/tx394b54bb.hex \
+#	test/data/txcreate1.hex \
+#	test/data/txcreate2.hex \
+#	test/data/txcreatesign.hex
 
-am__append_19 = \
-  test/accounting_tests.cpp \
-  test/wallet_tests.cpp \
-  test/rpc_wallet_tests.cpp
+#am__append_19 = \
+#  test/accounting_tests.cpp \
+#  test/wallet_tests.cpp \
+#  test/rpc_wallet_tests.cpp
 
-am__append_20 = $(LIBBITCOIN_WALLET)
-#am__append_21 = $(ZMQ_LIBS)
-am__append_22 = $(CLEAN_BITCOIN_TEST)
+#am__append_20 = $(LIBBITCOIN_WALLET)
+##am__append_21 = $(ZMQ_LIBS)
+#am__append_22 = $(CLEAN_BITCOIN_TEST)
 #am__append_23 = qt/tele-qt
 #am__append_24 = qt/libbitcoinqt.a
 #am__append_25 = \
@@ -701,7 +701,7 @@ am_libbitcoinconsensus_la_rpath = -rpath \
 am__EXEEXT_1 = teled$(EXEEXT)
 am__EXEEXT_2 = tele-cli$(EXEEXT) \
 	tele-tx$(EXEEXT)
-am__EXEEXT_3 = test/test_tele$(EXEEXT)
+#am__EXEEXT_3 = test/test_tele$(EXEEXT)
 #am__EXEEXT_4 = qt/tele-qt$(EXEEXT)
 #am__EXEEXT_5 = qt/test/test_tele-qt$(EXEEXT)
 PROGRAMS = $(bin_PROGRAMS)
@@ -835,63 +835,63 @@ am__test_test_tele_SOURCES_DIST = test/bignum.h \
 	test/data/script_invalid.json test/data/tx_invalid.json \
 	test/data/tx_valid.json test/data/sighash.json \
 	test/data/alertTests.raw
-am__objects_19 = test/test_test_tele-accounting_tests.$(OBJEXT) \
-	test/test_test_tele-wallet_tests.$(OBJEXT) \
-	test/test_test_tele-rpc_wallet_tests.$(OBJEXT)
-am__objects_20 = test/test_test_tele-allocator_tests.$(OBJEXT) \
-	test/test_test_tele-base32_tests.$(OBJEXT) \
-	test/test_test_tele-base58_tests.$(OBJEXT) \
-	test/test_test_tele-base64_tests.$(OBJEXT) \
-	test/test_test_tele-checkblock_tests.$(OBJEXT) \
-	test/test_test_tele-Checkpoints_tests.$(OBJEXT) \
-	test/test_test_tele-coins_tests.$(OBJEXT) \
-	test/test_test_tele-compress_tests.$(OBJEXT) \
-	test/test_test_tele-crypto_tests.$(OBJEXT) \
-	test/test_test_tele-DoS_tests.$(OBJEXT) \
-	test/test_test_tele-getarg_tests.$(OBJEXT) \
-	test/test_test_tele-hash_tests.$(OBJEXT) \
-	test/test_test_tele-key_tests.$(OBJEXT) \
-	test/test_test_tele-main_tests.$(OBJEXT) \
-	test/test_test_tele-mempool_tests.$(OBJEXT) \
-	test/test_test_tele-mruset_tests.$(OBJEXT) \
-	test/test_test_tele-multisig_tests.$(OBJEXT) \
-	test/test_test_tele-netbase_tests.$(OBJEXT) \
-	test/test_test_tele-pmt_tests.$(OBJEXT) \
-	test/test_test_tele-rpc_tests.$(OBJEXT) \
-	test/test_test_tele-sanity_tests.$(OBJEXT) \
-	test/test_test_tele-script_P2SH_tests.$(OBJEXT) \
-	test/test_test_tele-script_tests.$(OBJEXT) \
-	test/test_test_tele-scriptnum_tests.$(OBJEXT) \
-	test/test_test_tele-serialize_tests.$(OBJEXT) \
-	test/test_test_tele-sighash_tests.$(OBJEXT) \
-	test/test_test_tele-sigopcount_tests.$(OBJEXT) \
-	test/test_test_tele-skiplist_tests.$(OBJEXT) \
-	test/test_test_tele-test_tele.$(OBJEXT) \
-	test/test_test_tele-timedata_tests.$(OBJEXT) \
-	test/test_test_tele-transaction_tests.$(OBJEXT) \
-	test/test_test_tele-uint256_tests.$(OBJEXT) \
-	test/test_test_tele-univalue_tests.$(OBJEXT) \
-	test/test_test_tele-util_tests.$(OBJEXT) \
-	$(am__objects_19)
-am_test_test_tele_OBJECTS = $(am__objects_20) \
-	$(am__objects_1) $(am__objects_1)
-am__objects_21 = $(am__objects_1) $(am__objects_1)
-nodist_test_test_tele_OBJECTS = $(am__objects_21)
+#am__objects_19 = test/test_test_tele-accounting_tests.$(OBJEXT) \
+#	test/test_test_tele-wallet_tests.$(OBJEXT) \
+#	test/test_test_tele-rpc_wallet_tests.$(OBJEXT)
+#am__objects_20 = test/test_test_tele-allocator_tests.$(OBJEXT) \
+#	test/test_test_tele-base32_tests.$(OBJEXT) \
+#	test/test_test_tele-base58_tests.$(OBJEXT) \
+#	test/test_test_tele-base64_tests.$(OBJEXT) \
+#	test/test_test_tele-checkblock_tests.$(OBJEXT) \
+#	test/test_test_tele-Checkpoints_tests.$(OBJEXT) \
+#	test/test_test_tele-coins_tests.$(OBJEXT) \
+#	test/test_test_tele-compress_tests.$(OBJEXT) \
+#	test/test_test_tele-crypto_tests.$(OBJEXT) \
+#	test/test_test_tele-DoS_tests.$(OBJEXT) \
+#	test/test_test_tele-getarg_tests.$(OBJEXT) \
+#	test/test_test_tele-hash_tests.$(OBJEXT) \
+#	test/test_test_tele-key_tests.$(OBJEXT) \
+#	test/test_test_tele-main_tests.$(OBJEXT) \
+#	test/test_test_tele-mempool_tests.$(OBJEXT) \
+#	test/test_test_tele-mruset_tests.$(OBJEXT) \
+#	test/test_test_tele-multisig_tests.$(OBJEXT) \
+#	test/test_test_tele-netbase_tests.$(OBJEXT) \
+#	test/test_test_tele-pmt_tests.$(OBJEXT) \
+#	test/test_test_tele-rpc_tests.$(OBJEXT) \
+#	test/test_test_tele-sanity_tests.$(OBJEXT) \
+#	test/test_test_tele-script_P2SH_tests.$(OBJEXT) \
+#	test/test_test_tele-script_tests.$(OBJEXT) \
+#	test/test_test_tele-scriptnum_tests.$(OBJEXT) \
+#	test/test_test_tele-serialize_tests.$(OBJEXT) \
+#	test/test_test_tele-sighash_tests.$(OBJEXT) \
+#	test/test_test_tele-sigopcount_tests.$(OBJEXT) \
+#	test/test_test_tele-skiplist_tests.$(OBJEXT) \
+#	test/test_test_tele-test_tele.$(OBJEXT) \
+#	test/test_test_tele-timedata_tests.$(OBJEXT) \
+#	test/test_test_tele-transaction_tests.$(OBJEXT) \
+#	test/test_test_tele-uint256_tests.$(OBJEXT) \
+#	test/test_test_tele-univalue_tests.$(OBJEXT) \
+#	test/test_test_tele-util_tests.$(OBJEXT) \
+#	$(am__objects_19)
+#am_test_test_tele_OBJECTS = $(am__objects_20) \
+#	$(am__objects_1) $(am__objects_1)
+#am__objects_21 = $(am__objects_1) $(am__objects_1)
+#nodist_test_test_tele_OBJECTS = $(am__objects_21)
 test_test_tele_OBJECTS = $(am_test_test_tele_OBJECTS) \
 	$(nodist_test_test_tele_OBJECTS)
 am__DEPENDENCIES_7 = libbitcoinconsensus.la
-#am__DEPENDENCIES_8 =  \
-#	$(am__DEPENDENCIES_1)
-test_test_tele_DEPENDENCIES = $(LIBBITCOIN_SERVER) \
-	$(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) \
-	$(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) \
-	$(LIBBITCOIN_UNIVALUE) \
-	$(am__DEPENDENCIES_3) $(am__DEPENDENCIES_4) \
-	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(LIBSECP256K1) $(am__append_20) \
-	$(am__DEPENDENCIES_7) $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_8)
+##am__DEPENDENCIES_8 =  \
+##	$(am__DEPENDENCIES_1)
+#test_test_tele_DEPENDENCIES = $(LIBBITCOIN_SERVER) \
+#	$(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) \
+#	$(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) \
+#	$(LIBBITCOIN_UNIVALUE) \
+#	$(am__DEPENDENCIES_3) $(am__DEPENDENCIES_4) \
+#	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
+#	$(LIBSECP256K1) $(am__append_20) \
+#	$(am__DEPENDENCIES_7) $(am__DEPENDENCIES_1) \
+#	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
+#	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_8)
 test_test_tele_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
 	$(AM_CXXFLAGS) $(CXXFLAGS) $(test_test_tele_LDFLAGS) \
@@ -1190,8 +1190,8 @@ am__set_TESTS_bases = \
   bases=`for i in $$bases; do echo $$i; done | sed 's/\.log$$//'`; \
   bases=`echo $$bases`
 RECHECK_LOGS = $(TEST_LOGS)
-am__EXEEXT_6 = test/test_tele$(EXEEXT) \
-	test/bitcoin-util-test.py
+#am__EXEEXT_6 = test/test_tele$(EXEEXT) \
+#	test/bitcoin-util-test.py
 TEST_SUITE_LOG = test-suite.log
 TEST_EXTENSIONS =  .test
 LOG_DRIVER = $(SHELL) $(top_srcdir)/build-aux/test-driver
@@ -1256,10 +1256,10 @@ BOOST_LIBS = -L/usr/lib/x86_64-linux-gnu -lboost_system -lboost_filesystem -lboo
 BOOST_PROGRAM_OPTIONS_LIB = -lboost_program_options
 BOOST_SYSTEM_LIB = -lboost_system
 BOOST_THREAD_LIB = -lboost_thread
-BOOST_UNIT_TEST_FRAMEWORK_LIB = -lboost_unit_test_framework
+BOOST_UNIT_TEST_FRAMEWORK_LIB = 
 BREW = 
 BUILD_QT = 
-BUILD_TEST = test
+BUILD_TEST = 
 BUILD_TEST_QT = 
 CC = gcc
 CCACHE = 
@@ -1271,10 +1271,10 @@ CLIENT_VERSION_MAJOR = 1
 CLIENT_VERSION_MINOR = 0
 CLIENT_VERSION_REVISION = 0
 COMPARISON_TOOL_REORG_TESTS = 0
-COPYRIGHT_YEAR = 2017
+COPYRIGHT_YEAR = 2018
 CPP = gcc -E
 CPPFILT = /usr/bin/c++filt
-CPPFLAGS =  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -DHAVE_QT5
+CPPFLAGS =  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2
 CRYPTO_CFLAGS =  
 CRYPTO_LIBS = -lcrypto  
 CXX = g++ -std=c++11
@@ -1322,9 +1322,9 @@ LIBTOOL = $(SHELL) $(top_builddir)/libtool
 LIBTOOL_APP_LDFLAGS = 
 LIPO = 
 LN_S = ln -s
-LRELEASE = /usr/lib/x86_64-linux-gnu/qt5/bin/lrelease
+LRELEASE = 
 LTLIBOBJS = 
-LUPDATE = /usr/lib/x86_64-linux-gnu/qt5/bin/lupdate
+LUPDATE = 
 MAINT = 
 MAKEINFO = ${SHELL} /home/mammix2/Desktop/repo/tele/tele-mn-v2/build-aux/missing makeinfo
 MAKENSIS = 
@@ -1332,7 +1332,7 @@ MANIFEST_TOOL = :
 MINIUPNPC_CPPFLAGS = 
 MINIUPNPC_LIBS = 
 MKDIR_P = /bin/mkdir -p
-MOC = /usr/lib/x86_64-linux-gnu/qt5/bin/moc
+MOC = 
 MOC_DEFS = -DHAVE_CONFIG_H -I$(srcdir)
 NM = /usr/bin/nm -B
 NMEDIT = 
@@ -1356,8 +1356,8 @@ PKG_CONFIG = /usr/bin/pkg-config
 PKG_CONFIG_LIBDIR = 
 PKG_CONFIG_PATH = 
 PORT = 
-PROTOBUF_CFLAGS = -pthread  
-PROTOBUF_LIBS = -pthread -lprotobuf -lpthread  
+PROTOBUF_CFLAGS = 
+PROTOBUF_LIBS = 
 PROTOC = 
 PTHREAD_CC = gcc
 PTHREAD_CFLAGS = -pthread
@@ -1372,21 +1372,21 @@ QTPRINT_CFLAGS =
 QTPRINT_LIBS = 
 QTXCBQPA_CFLAGS = 
 QTXCBQPA_LIBS = 
-QT_CFLAGS = -I/usr/include/qt5/QtCore -I/usr/include/qt5 -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtWidgets  
-QT_DBUS_CFLAGS = -I/usr/include/qt5/QtDBus -I/usr/include/qt5 -I/usr/include/qt5/QtCore  
-QT_DBUS_INCLUDES = -I/usr/include/qt5/QtDBus -I/usr/include/qt5 -I/usr/include/qt5/QtCore  
-QT_DBUS_LIBS = -lQt5DBus -lQt5Core  
-QT_INCLUDES = -I/usr/include/qt5/QtCore -I/usr/include/qt5 -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtWidgets  
+QT_CFLAGS = 
+QT_DBUS_CFLAGS = 
+QT_DBUS_INCLUDES = 
+QT_DBUS_LIBS = 
+QT_INCLUDES = 
 QT_LDFLAGS = 
-QT_LIBS = -lQt5Network -lQt5Widgets -lQt5Gui -lQt5Core  
+QT_LIBS = 
 QT_PIE_FLAGS = 
-QT_SELECT = qt5
-QT_TEST_CFLAGS = -I/usr/include/qt5/QtTest -I/usr/include/qt5 -I/usr/include/qt5/QtCore  
-QT_TEST_INCLUDES = -I/usr/include/qt5/QtTest -I/usr/include/qt5 -I/usr/include/qt5/QtCore  
-QT_TEST_LIBS = -lQt5Test -lQt5Core  
+QT_SELECT = qt
+QT_TEST_CFLAGS = 
+QT_TEST_INCLUDES = 
+QT_TEST_LIBS = 
 QT_TRANSLATION_DIR = 
 RANLIB = /usr/bin/ranlib
-RCC = /usr/lib/x86_64-linux-gnu/qt5/bin/rcc
+RCC = 
 READELF = /usr/bin/readelf
 RELDFLAGS = -Wl,--exclude-libs,ALL
 RSVG_CONVERT = 
@@ -1396,9 +1396,9 @@ SHELL = /bin/bash
 SSL_CFLAGS =  
 SSL_LIBS = -lssl -lcrypto  
 STRIP = /usr/bin/strip
-TESTDEFS =  -DBOOST_TEST_DYN_LINK
+TESTDEFS = 
 TIFFCP = 
-UIC = /usr/lib/x86_64-linux-gnu/qt5/bin/uic
+UIC = 
 USE_QRCODE = 
 USE_UPNP = 
 VERSION = 1.0.0
@@ -1823,65 +1823,65 @@ CLEANFILES = leveldb/libleveldb.a leveldb/libmemenv.a *.gcda *.gcno \
 	zmq/*.gcno $(am__append_22) $(am__append_30) $(am__append_37)
 DISTCLEANFILES = obj/build.h
 EXTRA_DIST = leveldb $(am__append_18)
-TEST_SRCDIR = test
-TEST_BINARY = test/test_tele$(EXEEXT)
-JSON_TEST_FILES = \
-  test/data/script_valid.json \
-  test/data/base58_keys_valid.json \
-  test/data/sig_canonical.json \
-  test/data/sig_noncanonical.json \
-  test/data/base58_encode_decode.json \
-  test/data/base58_keys_invalid.json \
-  test/data/script_invalid.json \
-  test/data/tx_invalid.json \
-  test/data/tx_valid.json \
-  test/data/sighash.json
+#TEST_SRCDIR = test
+#TEST_BINARY = test/test_tele$(EXEEXT)
+#JSON_TEST_FILES = \
+#  test/data/script_valid.json \
+#  test/data/base58_keys_valid.json \
+#  test/data/sig_canonical.json \
+#  test/data/sig_noncanonical.json \
+#  test/data/base58_encode_decode.json \
+#  test/data/base58_keys_invalid.json \
+#  test/data/script_invalid.json \
+#  test/data/tx_invalid.json \
+#  test/data/tx_valid.json \
+#  test/data/sighash.json
 
-RAW_TEST_FILES = test/data/alertTests.raw
-GENERATED_TEST_FILES = $(JSON_TEST_FILES:.json=.json.h) $(RAW_TEST_FILES:.raw=.raw.h)
-BITCOIN_TESTS = test/bignum.h \
-	test/allocator_tests.cpp \
-	test/base32_tests.cpp test/base58_tests.cpp \
-	test/base64_tests.cpp \
-	test/checkblock_tests.cpp \
-	test/Checkpoints_tests.cpp \
-	test/coins_tests.cpp \
-	test/compress_tests.cpp \
-	test/crypto_tests.cpp test/DoS_tests.cpp \
-	test/getarg_tests.cpp test/hash_tests.cpp \
-	test/key_tests.cpp test/main_tests.cpp \
-	test/mempool_tests.cpp \
-	test/mruset_tests.cpp \
-	test/multisig_tests.cpp \
-	test/netbase_tests.cpp test/pmt_tests.cpp \
-	test/rpc_tests.cpp test/sanity_tests.cpp \
-	test/script_P2SH_tests.cpp \
-	test/script_tests.cpp \
-	test/scriptnum_tests.cpp \
-	test/serialize_tests.cpp \
-	test/sighash_tests.cpp \
-	test/sigopcount_tests.cpp \
-	test/skiplist_tests.cpp test/test_tele.cpp \
-	test/timedata_tests.cpp \
-	test/transaction_tests.cpp \
-	test/uint256_tests.cpp \
-	test/univalue_tests.cpp test/util_tests.cpp \
-	$(am__append_19)
-test_test_tele_SOURCES = $(BITCOIN_TESTS) $(JSON_TEST_FILES) $(RAW_TEST_FILES)
-test_test_tele_CPPFLAGS = $(BITCOIN_INCLUDES) -I$(builddir)/test/ $(TESTDEFS)
-test_test_tele_LDADD = $(LIBBITCOIN_SERVER) \
-	$(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) \
-	$(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) \
-	$(LIBBITCOIN_UNIVALUE) $(LIBLEVELDB) \
-	$(LIBMEMENV) $(BOOST_LIBS) \
-	$(BOOST_UNIT_TEST_FRAMEWORK_LIB) \
-	$(LIBSECP256K1) $(am__append_20) \
-	$(LIBBITCOIN_CONSENSUS) $(BDB_LIBS) \
-	$(SSL_LIBS) $(CRYPTO_LIBS) \
-	$(MINIUPNPC_LIBS) $(am__append_21)
-test_test_tele_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) -static
-nodist_test_test_tele_SOURCES = $(GENERATED_TEST_FILES)
-CLEAN_BITCOIN_TEST = test/*.gcda test/*.gcno $(GENERATED_TEST_FILES)
+#RAW_TEST_FILES = test/data/alertTests.raw
+#GENERATED_TEST_FILES = $(JSON_TEST_FILES:.json=.json.h) $(RAW_TEST_FILES:.raw=.raw.h)
+#BITCOIN_TESTS = test/bignum.h \
+#	test/allocator_tests.cpp \
+#	test/base32_tests.cpp test/base58_tests.cpp \
+#	test/base64_tests.cpp \
+#	test/checkblock_tests.cpp \
+#	test/Checkpoints_tests.cpp \
+#	test/coins_tests.cpp \
+#	test/compress_tests.cpp \
+#	test/crypto_tests.cpp test/DoS_tests.cpp \
+#	test/getarg_tests.cpp test/hash_tests.cpp \
+#	test/key_tests.cpp test/main_tests.cpp \
+#	test/mempool_tests.cpp \
+#	test/mruset_tests.cpp \
+#	test/multisig_tests.cpp \
+#	test/netbase_tests.cpp test/pmt_tests.cpp \
+#	test/rpc_tests.cpp test/sanity_tests.cpp \
+#	test/script_P2SH_tests.cpp \
+#	test/script_tests.cpp \
+#	test/scriptnum_tests.cpp \
+#	test/serialize_tests.cpp \
+#	test/sighash_tests.cpp \
+#	test/sigopcount_tests.cpp \
+#	test/skiplist_tests.cpp test/test_tele.cpp \
+#	test/timedata_tests.cpp \
+#	test/transaction_tests.cpp \
+#	test/uint256_tests.cpp \
+#	test/univalue_tests.cpp test/util_tests.cpp \
+#	$(am__append_19)
+#test_test_tele_SOURCES = $(BITCOIN_TESTS) $(JSON_TEST_FILES) $(RAW_TEST_FILES)
+#test_test_tele_CPPFLAGS = $(BITCOIN_INCLUDES) -I$(builddir)/test/ $(TESTDEFS)
+#test_test_tele_LDADD = $(LIBBITCOIN_SERVER) \
+#	$(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) \
+#	$(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) \
+#	$(LIBBITCOIN_UNIVALUE) $(LIBLEVELDB) \
+#	$(LIBMEMENV) $(BOOST_LIBS) \
+#	$(BOOST_UNIT_TEST_FRAMEWORK_LIB) \
+#	$(LIBSECP256K1) $(am__append_20) \
+#	$(LIBBITCOIN_CONSENSUS) $(BDB_LIBS) \
+#	$(SSL_LIBS) $(CRYPTO_LIBS) \
+#	$(MINIUPNPC_LIBS) $(am__append_21)
+#test_test_tele_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) -static
+#nodist_test_test_tele_SOURCES = $(GENERATED_TEST_FILES)
+#CLEAN_BITCOIN_TEST = test/*.gcda test/*.gcno $(GENERATED_TEST_FILES)
 
 # tele qt core #
 #QT_TS = \
@@ -7344,7 +7344,7 @@ distdir: $(DISTFILES)
 	      || exit 1; \
 	  fi; \
 	done
-#check-local:
+check-local:
 check-am: all-am
 	$(MAKE) $(AM_MAKEFLAGS) check-TESTS check-local
 check: check-recursive
@@ -7541,34 +7541,34 @@ clean-local:
 	@test -f $(PROTOC)
 	$(AM_V_GEN) $(PROTOC) --cpp_out=$(@D) --proto_path=$(abspath $(<D) $<)
 
-$(BITCOIN_TESTS): $(GENERATED_TEST_FILES)
+#$(BITCOIN_TESTS): $(GENERATED_TEST_FILES)
 
-tele_test: $(TEST_BINARY)
+#tele_test: $(TEST_BINARY)
 
-tele_test_check: $(TEST_BINARY) FORCE
-	$(MAKE) check-TESTS TESTS=$^
+#tele_test_check: $(TEST_BINARY) FORCE
+#	$(MAKE) check-TESTS TESTS=$^
 
-tele_test_clean : FORCE
-	rm -f $(CLEAN_BITCOIN_TEST) $(test_test_tele_OBJECTS) $(TEST_BINARY)
+#tele_test_clean : FORCE
+#	rm -f $(CLEAN_BITCOIN_TEST) $(test_test_tele_OBJECTS) $(TEST_BINARY)
 
-check-local:
-	$(AM_V_at)$(MAKE) $(AM_MAKEFLAGS) -C secp256k1 check
+#check-local:
+#	$(AM_V_at)$(MAKE) $(AM_MAKEFLAGS) -C secp256k1 check
 
-%.json.h: %.json
-	@$(MKDIR_P) $(@D)
-	@echo "namespace json_tests{" > $@
-	@echo "static unsigned const char $(*F)[] = {" >> $@
-	@$(HEXDUMP) -v -e '8/1 "0x%02x, "' -e '"\n"' $< | $(SED) -e 's/0x  ,//g' >> $@
-	@echo "};};" >> $@
-	@echo "Generated $@"
+#%.json.h: %.json
+#	@$(MKDIR_P) $(@D)
+#	@echo "namespace json_tests{" > $@
+#	@echo "static unsigned const char $(*F)[] = {" >> $@
+#	@$(HEXDUMP) -v -e '8/1 "0x%02x, "' -e '"\n"' $< | $(SED) -e 's/0x  ,//g' >> $@
+#	@echo "};};" >> $@
+#	@echo "Generated $@"
 
-%.raw.h: %.raw
-	@$(MKDIR_P) $(@D)
-	@echo "namespace alert_tests{" > $@
-	@echo "static unsigned const char $(*F)[] = {" >> $@
-	@$(HEXDUMP) -v -e '8/1 "0x%02x, "' -e '"\n"' $< | $(SED) -e 's/0x  ,//g' >> $@
-	@echo "};};" >> $@
-	@echo "Generated $@"
+#%.raw.h: %.raw
+#	@$(MKDIR_P) $(@D)
+#	@echo "namespace alert_tests{" > $@
+#	@echo "static unsigned const char $(*F)[] = {" >> $@
+#	@$(HEXDUMP) -v -e '8/1 "0x%02x, "' -e '"\n"' $< | $(SED) -e 's/0x  ,//g' >> $@
+#	@echo "};};" >> $@
+#	@echo "Generated $@"
 
 # Most files will depend on the forms and moc files as includes. Generate them
 # before anything else.

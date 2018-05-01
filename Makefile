@@ -88,8 +88,9 @@ DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/Makefile.am \
 	$(top_srcdir)/qa/pull-tester/tests-config.sh.in \
 	$(top_srcdir)/contrib/devtools/split-debug.sh.in COPYING \
 	INSTALL build-aux/compile build-aux/config.guess \
-	build-aux/config.sub build-aux/install-sh build-aux/missing \
-	build-aux/ltmain.sh $(top_srcdir)/build-aux/compile \
+	build-aux/config.sub build-aux/depcomp build-aux/install-sh \
+	build-aux/missing build-aux/ltmain.sh \
+	$(top_srcdir)/build-aux/compile \
 	$(top_srcdir)/build-aux/config.guess \
 	$(top_srcdir)/build-aux/config.sub \
 	$(top_srcdir)/build-aux/install-sh \
@@ -243,10 +244,10 @@ BOOST_LIBS = -L/usr/lib/x86_64-linux-gnu -lboost_system -lboost_filesystem -lboo
 BOOST_PROGRAM_OPTIONS_LIB = -lboost_program_options
 BOOST_SYSTEM_LIB = -lboost_system
 BOOST_THREAD_LIB = -lboost_thread
-BOOST_UNIT_TEST_FRAMEWORK_LIB = -lboost_unit_test_framework
+BOOST_UNIT_TEST_FRAMEWORK_LIB = 
 BREW = 
 BUILD_QT = 
-BUILD_TEST = test
+BUILD_TEST = 
 BUILD_TEST_QT = 
 CC = gcc
 CCACHE = 
@@ -258,10 +259,10 @@ CLIENT_VERSION_MAJOR = 1
 CLIENT_VERSION_MINOR = 0
 CLIENT_VERSION_REVISION = 0
 COMPARISON_TOOL_REORG_TESTS = 0
-COPYRIGHT_YEAR = 2017
+COPYRIGHT_YEAR = 2018
 CPP = gcc -E
 CPPFILT = /usr/bin/c++filt
-CPPFLAGS =  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -DHAVE_QT5
+CPPFLAGS =  -DBOOST_SPIRIT_THREADSAFE -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2
 CRYPTO_CFLAGS =  
 CRYPTO_LIBS = -lcrypto  
 CXX = g++ -std=c++11
@@ -309,9 +310,9 @@ LIBTOOL = $(SHELL) $(top_builddir)/libtool
 LIBTOOL_APP_LDFLAGS = 
 LIPO = 
 LN_S = ln -s
-LRELEASE = /usr/lib/x86_64-linux-gnu/qt5/bin/lrelease
+LRELEASE = 
 LTLIBOBJS = 
-LUPDATE = /usr/lib/x86_64-linux-gnu/qt5/bin/lupdate
+LUPDATE = 
 MAINT = 
 MAKEINFO = ${SHELL} /home/mammix2/Desktop/repo/tele/tele-mn-v2/build-aux/missing makeinfo
 MAKENSIS = 
@@ -319,7 +320,7 @@ MANIFEST_TOOL = :
 MINIUPNPC_CPPFLAGS = 
 MINIUPNPC_LIBS = 
 MKDIR_P = /bin/mkdir -p
-MOC = /usr/lib/x86_64-linux-gnu/qt5/bin/moc
+MOC = 
 MOC_DEFS = -DHAVE_CONFIG_H -I$(srcdir)
 NM = /usr/bin/nm -B
 NMEDIT = 
@@ -343,8 +344,8 @@ PKG_CONFIG = /usr/bin/pkg-config
 PKG_CONFIG_LIBDIR = 
 PKG_CONFIG_PATH = 
 PORT = 
-PROTOBUF_CFLAGS = -pthread  
-PROTOBUF_LIBS = -pthread -lprotobuf -lpthread  
+PROTOBUF_CFLAGS = 
+PROTOBUF_LIBS = 
 PROTOC = 
 PTHREAD_CC = gcc
 PTHREAD_CFLAGS = -pthread
@@ -359,21 +360,21 @@ QTPRINT_CFLAGS =
 QTPRINT_LIBS = 
 QTXCBQPA_CFLAGS = 
 QTXCBQPA_LIBS = 
-QT_CFLAGS = -I/usr/include/qt5/QtCore -I/usr/include/qt5 -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtWidgets  
-QT_DBUS_CFLAGS = -I/usr/include/qt5/QtDBus -I/usr/include/qt5 -I/usr/include/qt5/QtCore  
-QT_DBUS_INCLUDES = -I/usr/include/qt5/QtDBus -I/usr/include/qt5 -I/usr/include/qt5/QtCore  
-QT_DBUS_LIBS = -lQt5DBus -lQt5Core  
-QT_INCLUDES = -I/usr/include/qt5/QtCore -I/usr/include/qt5 -I/usr/include/qt5/QtGui -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtWidgets  
+QT_CFLAGS = 
+QT_DBUS_CFLAGS = 
+QT_DBUS_INCLUDES = 
+QT_DBUS_LIBS = 
+QT_INCLUDES = 
 QT_LDFLAGS = 
-QT_LIBS = -lQt5Network -lQt5Widgets -lQt5Gui -lQt5Core  
+QT_LIBS = 
 QT_PIE_FLAGS = 
-QT_SELECT = qt5
-QT_TEST_CFLAGS = -I/usr/include/qt5/QtTest -I/usr/include/qt5 -I/usr/include/qt5/QtCore  
-QT_TEST_INCLUDES = -I/usr/include/qt5/QtTest -I/usr/include/qt5 -I/usr/include/qt5/QtCore  
-QT_TEST_LIBS = -lQt5Test -lQt5Core  
+QT_SELECT = qt
+QT_TEST_CFLAGS = 
+QT_TEST_INCLUDES = 
+QT_TEST_LIBS = 
 QT_TRANSLATION_DIR = 
 RANLIB = /usr/bin/ranlib
-RCC = /usr/lib/x86_64-linux-gnu/qt5/bin/rcc
+RCC = 
 READELF = /usr/bin/readelf
 RELDFLAGS = -Wl,--exclude-libs,ALL
 RSVG_CONVERT = 
@@ -383,9 +384,9 @@ SHELL = /bin/bash
 SSL_CFLAGS =  
 SSL_LIBS = -lssl -lcrypto  
 STRIP = /usr/bin/strip
-TESTDEFS =  -DBOOST_TEST_DYN_LINK
+TESTDEFS = 
 TIFFCP = 
-UIC = /usr/lib/x86_64-linux-gnu/qt5/bin/uic
+UIC = 
 USE_QRCODE = 
 USE_UPNP = 
 VERSION = 1.0.0

@@ -1610,7 +1610,7 @@ double ConvertBitsToDouble(unsigned int nBits)
     return dDiff;
 }
 
-int64_t GetBlockValue(int nHeight, CAmount nFees)
+int64_t GetBlockValue(int nHeight, CAmount nFees, bool fBudgetBlock)
 {
     CAmount nSubsidy;
 

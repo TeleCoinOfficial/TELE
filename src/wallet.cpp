@@ -1588,17 +1588,20 @@ bool CWallet::SelectStakeCoins(std::set<std::pair<const CWalletTx*, unsigned int
 bool CWallet::MintableCoins()
 {
     CAmount nBalance = GetBalance();
-    if (mapArgs.count("-reservebalance") && !ParseMoney(mapArgs["-reservebalance"], nReserveBalance))
-        return error("MintableCoins() : invalid reserve balance amount");
-    if (nBalance <= nReserveBalance)
-        return false;
+    if (nBalance > 0) {
+        if (mapArgs.count("-reservebalance") && !ParseMoney(mapArgs["-reservebalance"], nReserveBalance))
+            return error("%s : invalid reserve balance amount", __func__);
+        if (nBalance <= nReserveBalance)
+            return false;
 
     vector<COutput> vCoins;
     AvailableCoins(vCoins, true);
 
-    BOOST_FOREACH (const COutput& out, vCoins) {
-        if (GetTime() - out.tx->GetTxTime() > Params().GetMinStakeAge())
-            return true;
+        for (const COutput& out : vCoins) {
+            int64_t nTxTime = out.tx->GetTxTime();
+            if (GetAdjustedTime() - nTxTime > Params().GetMinStakeAge())
+                return true;
+        }
     }
 
     return false;
@@ -2336,7 +2339,7 @@ bool CWallet::CreateCoinStake(const CKeyStore& keystore, unsigned int nBits, int
     if (mapArgs.count("-reservebalance") && !ParseMoney(mapArgs["-reservebalance"], nReserveBalance))
         return error("CreateCoinStake : invalid reserve balance amount");
 
-    if (nBalance <= nReserveBalance)
+    if (nBalance > 0 && nBalance <= nReserveBalance)
         return false;
 
     // presstab HyperStake - Initialize as static and don't update the set on every run of CreateCoinStake() in order to lighten resource use

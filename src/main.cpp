@@ -1610,20 +1610,15 @@ double ConvertBitsToDouble(unsigned int nBits)
     return dDiff;
 }
 
-int64_t GetBlockValue(int nHeight, CAmount nFees, bool fBudgetBlock)
+int64_t GetBlockValue(int nHeight, CAmount nFees)
 {
-    int64_t nBudgetMultiplier = COIN;
-    if (!fBudgetBlock)
-        nBudgetMultiplier = COIN - (Params().GetBudgetPercent() * CENT);
+    CAmount nSubsidy;
 
-    CAmount nSubsidy = 1 * nBudgetMultiplier; // Default PoS reward
-
-	    if (nHeight == 1){
-            return CAmount(15500000) * COIN;
-        }
-		else if (nHeight > 1 && nHeight <= Params().LAST_POW_BLOCK()){
-            return nFees;
-        }
+	if (nHeight == 1){
+		nSubsidy = 15500000 * COIN;
+    } else {
+        nSubsidy = 0.8409 * COIN;	
+	}
         
     return nSubsidy + nFees;
 }

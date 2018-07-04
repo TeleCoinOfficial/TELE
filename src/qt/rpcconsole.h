@@ -65,6 +65,7 @@ public slots:
     /** Wallet repair options */
     void walletSalvage();
     void walletRescan();
+    void walletResync();
     void walletZaptxes1();
     void walletZaptxes2();
     void walletUpgrade();

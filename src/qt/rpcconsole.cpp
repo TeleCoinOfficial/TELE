@@ -48,6 +48,7 @@ const int INITIAL_TRAFFIC_GRAPH_MINS = 30;
 // Repair parameters
 const QString SALVAGEWALLET("-salvagewallet");
 const QString RESCAN("-rescan");
+const QString RESYNC("-resync");
 const QString ZAPTXES1("-zapwallettxes=1");
 const QString ZAPTXES2("-zapwallettxes=2");
 const QString UPGRADEWALLET("-upgradewallet");
@@ -240,6 +241,7 @@ RPCConsole::RPCConsole(QWidget* parent) : QDialog(parent),
     // Wallet Repair Buttons
     connect(ui->btn_salvagewallet, SIGNAL(clicked()), this, SLOT(walletSalvage()));
     connect(ui->btn_rescan, SIGNAL(clicked()), this, SLOT(walletRescan()));
+    connect(ui->btn_resync, SIGNAL(clicked()), this, SLOT(walletResync()));
     connect(ui->btn_zapwallettxes1, SIGNAL(clicked()), this, SLOT(walletZaptxes1()));
     connect(ui->btn_zapwallettxes2, SIGNAL(clicked()), this, SLOT(walletZaptxes2()));
     connect(ui->btn_upgradewallet, SIGNAL(clicked()), this, SLOT(walletUpgrade()));
@@ -405,6 +407,12 @@ void RPCConsole::walletRescan()
     buildParameterlist(RESCAN);
 }
 
+/** Restart wallet with "-resync" */
+void RPCConsole::walletResync()
+{
+    buildParameterlist(RESYNC);
+}
+
 /** Restart wallet with "-zapwallettxes=1" */
 void RPCConsole::walletZaptxes1()
 {
@@ -439,6 +447,7 @@ void RPCConsole::buildParameterlist(QString arg)
     // Remove existing repair-options
     args.removeAll(SALVAGEWALLET);
     args.removeAll(RESCAN);
+    args.removeAll(RESYNC);
     args.removeAll(ZAPTXES1);
     args.removeAll(ZAPTXES2);
     args.removeAll(UPGRADEWALLET);

@@ -98,6 +98,9 @@ qrc_*.cpp
 
 # Qt creator
 *.pro.user
+*.config
+*.files
+*.includes
 
 # Mac specific
 .DS_Store

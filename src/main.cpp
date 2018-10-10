@@ -1614,6 +1614,11 @@ double ConvertBitsToDouble(unsigned int nBits)
 
 int64_t GetBlockValue(int nHeight, CAmount nFees, bool fBudgetBlock)
 {
+    int64_t nBudgetMultiplier = COIN;
+    if (!fBudgetBlock)
+        nBudgetMultiplier = COIN - (Params().GetBudgetPercent() * CENT);
+
+
     CAmount nSubsidy;
 
     if (nHeight < 499){

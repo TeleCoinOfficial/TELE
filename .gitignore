@@ -98,6 +98,7 @@ qrc_*.cpp
 
 # Qt creator
 *.pro.user
+*.user
 *.config
 *.files
 *.includes

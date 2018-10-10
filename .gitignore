@@ -97,12 +97,12 @@ src/test/buildenv.py
 qrc_*.cpp
 
 # Qt creator
-*.pro.user
-*.user
-*.config
-*.creator
-*.files
-*.includes
+tele-mn-linux.pro.user
+tele-mn-linux.user
+tele-mn-linux.config
+tele-mn-linux.creator
+tele-mn-linux.files
+tele-mn-linux.includes
 
 # Mac specific
 .DS_Store

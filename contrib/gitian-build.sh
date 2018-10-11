@@ -17,7 +17,7 @@ osx=true
 SIGNER=
 VERSION=
 commit=false
-url=https://github.com/mammix2/tele
+url=https://github.com/mammix2/tele-mn
 proc=2
 mem=2000
 lxc=true
@@ -31,7 +31,7 @@ commitFiles=true
 read -d '' usage <<- EOF
 Usage: $scriptName [-c|u|v|b|s|B|o|h|j|m|] signer version
 
-Run this script from the directory containing the tele, gitian-builder, gitian.sigs, and tele-detached-sigs.
+Run this script from the directory containing the tele-mn, gitian-builder, gitian.sigs, and tele-mn-detached-sigs.
 
 Arguments:
 signer          GPG signer to sign each build assert file
@@ -39,7 +39,7 @@ version		Version number, commit, or branch to build. If building a commit or bra
 
 Options:
 -c|--commit	Indicate that the version argument is for a commit or branch
--u|--url	Specify the URL of the repository. Default is https://github.com/mammix2/tele/tele
+-u|--url	Specify the URL of the repository. Default is https://github.com/mammix2/tele-mn
 -v|--verify 	Verify the gitian build
 -b|--build	Do a gitian build
 -s|--sign	Make signed binaries for Windows and Mac OSX
@@ -232,8 +232,8 @@ echo ${COMMIT}
 if [[ $setup = true ]]
 then
     sudo apt-get install ruby apache2 git apt-cacher-ng python-vm-builder qemu-kvm qemu-utils
-    git clone https://github.com/mammix2/tele/gitian.sigs.git
-    git clone https://github.com/mammix2/tele/tele-detached-sigs.git
+    git clone https://github.com/mammix2/tele-mn/gitian.sigs.git
+    git clone https://github.com/mammix2/tele-mn/tele-mn-detached-sigs.git
     git clone https://github.com/devrandom/gitian-builder.git
     pushd ./gitian-builder
     if [[ -n "$USE_LXC" ]]
@@ -247,7 +247,7 @@ then
 fi
 
 # Set up build
-pushd ./tele
+pushd ./tele-mn
 git fetch
 git checkout ${COMMIT}
 popd
@@ -256,7 +256,7 @@ popd
 if [[ $build = true ]]
 then
 	# Make output folder
-	mkdir -p ./tele-binaries/${VERSION}
+	mkdir -p ./tele-mn-binaries/${VERSION}
 
 	# Build Dependencies
 	echo ""
@@ -266,7 +266,7 @@ then
 	mkdir -p inputs
 	wget -N -P inputs $osslPatchUrl
 	wget -N -P inputs $osslTarUrl
-	make -C ../tele/depends download SOURCES_PATH=`pwd`/cache/common
+	make -C ../tele-mn/depends download SOURCES_PATH=`pwd`/cache/common
 
 	# Linux
 	if [[ $linux = true ]]
@@ -274,9 +274,9 @@ then
             echo ""
 	    echo "Compiling ${VERSION} Linux"
 	    echo ""
-	    ./bin/gbuild -j ${proc} -m ${mem} --commit tele=${COMMIT} --url tele=${url} ../tele/contrib/gitian-descriptors/gitian-linux.yml
-	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs/ ../tele/contrib/gitian-descriptors/gitian-linux.yml
-	    mv build/out/tele-*.tar.gz build/out/src/tele-*.tar.gz ../tele-binaries/${VERSION}
+	    ./bin/gbuild -j ${proc} -m ${mem} --commit tele-mn=${COMMIT} --url tele-mn=${url} ../tele-mn/contrib/gitian-descriptors/gitian-linux.yml
+	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs/ ../tele-mn/contrib/gitian-descriptors/gitian-linux.yml
+	    mv build/out/tele-mn-*.tar.gz build/out/src/tele-mn-*.tar.gz ../tele-mn-binaries/${VERSION}
 	fi
 	# Windows
 	if [[ $windows = true ]]
@@ -284,10 +284,10 @@ then
 	    echo ""
 	    echo "Compiling ${VERSION} Windows"
 	    echo ""
-	    ./bin/gbuild -j ${proc} -m ${mem} --commit tele=${COMMIT} --url tele=${url} ../tele/contrib/gitian-descriptors/gitian-win.yml
-	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs/ ../tele/contrib/gitian-descriptors/gitian-win.yml
-	    mv build/out/tele-*-win-unsigned.tar.gz inputs/tele-win-unsigned.tar.gz
-	    mv build/out/tele-*.zip build/out/tele-*.exe ../tele-binaries/${VERSION}
+	    ./bin/gbuild -j ${proc} -m ${mem} --commit tele-mn=${COMMIT} --url tele-mn=${url} ../tele-mn/contrib/gitian-descriptors/gitian-win.yml
+	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs/ ../tele-mn/contrib/gitian-descriptors/gitian-win.yml
+	    mv build/out/tele-mn-*-win-unsigned.tar.gz inputs/tele-mn-win-unsigned.tar.gz
+	    mv build/out/tele-mn-*.zip build/out/tele-mn-*.exe ../tele-mn-binaries/${VERSION}
 	fi
 	# Mac OSX
 	if [[ $osx = true ]]
@@ -295,10 +295,10 @@ then
 	    echo ""
 	    echo "Compiling ${VERSION} Mac OSX"
 	    echo ""
-	    ./bin/gbuild -j ${proc} -m ${mem} --commit tele=${COMMIT} --url tele=${url} ../tele/contrib/gitian-descriptors/gitian-osx.yml
-	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../tele/contrib/gitian-descriptors/gitian-osx.yml
-	    mv build/out/tele-*-osx-unsigned.tar.gz inputs/tele-osx-unsigned.tar.gz
-	    mv build/out/tele-*.tar.gz build/out/tele-*.dmg ../tele-binaries/${VERSION}
+	    ./bin/gbuild -j ${proc} -m ${mem} --commit tele-mn=${COMMIT} --url tele-mn=${url} ../tele-mn/contrib/gitian-descriptors/gitian-osx.yml
+	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../tele-mn/contrib/gitian-descriptors/gitian-osx.yml
+	    mv build/out/tele-mn-*-osx-unsigned.tar.gz inputs/tele-mn-osx-unsigned.tar.gz
+	    mv build/out/tele-mn-*.tar.gz build/out/tele-mn-*.dmg ../tele-mn-binaries/${VERSION}
 	fi
 	popd
 
@@ -325,27 +325,27 @@ then
 	echo ""
 	echo "Verifying v${VERSION} Linux"
 	echo ""
-	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-linux ../tele/contrib/gitian-descriptors/gitian-linux.yml
+	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-linux ../tele-mn/contrib/gitian-descriptors/gitian-linux.yml
 	# Windows
 	echo ""
 	echo "Verifying v${VERSION} Windows"
 	echo ""
-	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-unsigned ../tele/contrib/gitian-descriptors/gitian-win.yml
+	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-unsigned ../tele-mn/contrib/gitian-descriptors/gitian-win.yml
 	# Mac OSX
 	echo ""
 	echo "Verifying v${VERSION} Mac OSX"
 	echo ""
-	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-unsigned ../tele/contrib/gitian-descriptors/gitian-osx.yml
+	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-unsigned ../tele-mn/contrib/gitian-descriptors/gitian-osx.yml
 	# Signed Windows
 	echo ""
 	echo "Verifying v${VERSION} Signed Windows"
 	echo ""
-	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../tele/contrib/gitian-descriptors/gitian-osx-signer.yml
+	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../tele-mn/contrib/gitian-descriptors/gitian-osx-signer.yml
 	# Signed Mac OSX
 	echo ""
 	echo "Verifying v${VERSION} Signed Mac OSX"
 	echo ""
-	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../tele/contrib/gitian-descriptors/gitian-osx-signer.yml
+	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../tele-mn/contrib/gitian-descriptors/gitian-osx-signer.yml
 	popd
 fi
 
@@ -360,10 +360,10 @@ then
 	    echo ""
 	    echo "Signing ${VERSION} Windows"
 	    echo ""
-	    ./bin/gbuild -i --commit signature=${COMMIT} ../tele/contrib/gitian-descriptors/gitian-win-signer.yml
-	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs/ ../tele/contrib/gitian-descriptors/gitian-win-signer.yml
-	    mv build/out/tele-*win64-setup.exe ../tele-binaries/${VERSION}
-	    mv build/out/tele-*win32-setup.exe ../tele-binaries/${VERSION}
+	    ./bin/gbuild -i --commit signature=${COMMIT} ../tele-mn/contrib/gitian-descriptors/gitian-win-signer.yml
+	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs/ ../tele-mn/contrib/gitian-descriptors/gitian-win-signer.yml
+	    mv build/out/tele-mn-*win64-setup.exe ../tele-mn-binaries/${VERSION}
+	    mv build/out/tele-mn-*win32-setup.exe ../tele-mn-binaries/${VERSION}
 	fi
 	# Sign Mac OSX
 	if [[ $osx = true ]]
@@ -371,9 +371,9 @@ then
 	    echo ""
 	    echo "Signing ${VERSION} Mac OSX"
 	    echo ""
-	    ./bin/gbuild -i --commit signature=${COMMIT} ../tele/contrib/gitian-descriptors/gitian-osx-signer.yml
-	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../tele/contrib/gitian-descriptors/gitian-osx-signer.yml
-	    mv build/out/tele-osx-signed.dmg ../tele-binaries/${VERSION}/tele-${VERSION}-osx.dmg
+	    ./bin/gbuild -i --commit signature=${COMMIT} ../tele-mn/contrib/gitian-descriptors/gitian-osx-signer.yml
+	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../tele-mn/contrib/gitian-descriptors/gitian-osx-signer.yml
+	    mv build/out/tele-mn-osx-signed.dmg ../tele-mn-binaries/${VERSION}/tele-mn-${VERSION}-osx.dmg
 	fi
 	popd
 

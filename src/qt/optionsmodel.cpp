@@ -75,11 +75,11 @@ void OptionsModel::Init()
     if (!settings.contains("nObfuscationRounds"))
         settings.setValue("nObfuscationRounds", 2);
 
-    if (!settings.contains("nAnonymizeCteamAmount"))
-        settings.setValue("nAnonymizeCteamAmount", 1000);
+    if (!settings.contains("nAnonymizeCoinAmount"))
+        settings.setValue("nAnonymizeCoinAmount", 1000);
 
     nObfuscationRounds = settings.value("nObfuscationRounds").toLongLong();
-    nAnonymizeCteamAmount = settings.value("nAnonymizeCteamAmount").toLongLong();
+    nAnonymizeCoinAmount = settings.value("nAnonymizeCoinAmount").toLongLong();
 
     if (!settings.contains("fShowMasternodesTab"))
         settings.setValue("fShowMasternodesTab", masternodeConfig.getCount());
@@ -146,8 +146,8 @@ void OptionsModel::Init()
 
     if (settings.contains("nObfuscationRounds"))
         SoftSetArg("-obfuscationrounds", settings.value("nObfuscationRounds").toString().toStdString());
-    if (settings.contains("nAnonymizeCteamAmount"))
-        SoftSetArg("-anonymizeteleamount", settings.value("nAnonymizeCteamAmount").toString().toStdString());
+    if (settings.contains("nAnonymizeCoinAmount"))
+        SoftSetArg("-anonymizeteleamount", settings.value("nAnonymizeCoinAmount").toString().toStdString());
 
     language = settings.value("language").toString();
 }
@@ -228,7 +228,7 @@ QVariant OptionsModel::data(const QModelIndex& index, int role) const
         case ObfuscationRounds:
             return QVariant(nObfuscationRounds);
         case AnonymizeCteamAmount:
-            return QVariant(nAnonymizeCteamAmount);
+            return QVariant(nAnonymizeCoinAmount);
         case Listen:
             return settings.value("fListen");
         default:
@@ -338,9 +338,9 @@ bool OptionsModel::setData(const QModelIndex& index, const QVariant& value, int 
             emit obfuscationRoundsChanged(nObfuscationRounds);
             break;
         case AnonymizeCteamAmount:
-            nAnonymizeCteamAmount = value.toInt();
-            settings.setValue("nAnonymizeCteamAmount", nAnonymizeCteamAmount);
-            emit AnonymizeCteamAmountChanged(nAnonymizeCteamAmount);
+            nAnonymizeCoinAmount = value.toInt();
+            settings.setValue("nAnonymizeCoinAmount", nAnonymizeCoinAmount);
+            emit AnonymizeCteamAmountChanged(nAnonymizeCoinAmount);
             break;
         case CoinControlFeatures:
             fCoinControlFeatures = value.toBool();

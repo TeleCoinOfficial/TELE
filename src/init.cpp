@@ -1608,9 +1608,9 @@ bool AppInit2(boost::thread_group& threadGroup)
         nObfuscationRounds = 99999;
     }
 
-    nAnonymizeCteamAmount = GetArg("-anonymizeteleamount", 0);
-    if (nAnonymizeCteamAmount > 999999) nAnonymizeCteamAmount = 999999;
-    if (nAnonymizeCteamAmount < 2) nAnonymizeCteamAmount = 2;
+    nAnonymizeCoinAmount = GetArg("-anonymizeteleamount", 0);
+    if (nAnonymizeCoinAmount > 999999) nAnonymizeCoinAmount = 999999;
+    if (nAnonymizeCoinAmount < 2) nAnonymizeCoinAmount = 2;
 
     fEnableSwiftTX = GetBoolArg("-enableswifttx", fEnableSwiftTX);
     nSwiftTXDepth = GetArg("-swifttxdepth", nSwiftTXDepth);
@@ -1625,7 +1625,7 @@ bool AppInit2(boost::thread_group& threadGroup)
     LogPrintf("fLiteMode %d\n", fLiteMode);
     LogPrintf("nSwiftTXDepth %d\n", nSwiftTXDepth);
     LogPrintf("Obfuscation rounds %d\n", nObfuscationRounds);
-    LogPrintf("Anonymize TELE Amount %d\n", nAnonymizeCteamAmount);
+    LogPrintf("Anonymize TELE Amount %d\n", nAnonymizeCoinAmount);
     LogPrintf("Budget Mode %s\n", strBudgetMode.c_str());
 
     /* Denominations

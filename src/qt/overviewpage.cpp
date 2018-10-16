@@ -309,7 +309,7 @@ void OverviewPage::updateObfuscationProgress()
     if (!pwalletMain) return;
 
     QString strAmountAndRounds;
-    QString strAnonymizeCteamAmount = BitcoinUnits::formatHtmlWithUnit(nDisplayUnit, nAnonymizeCteamAmount * COIN, false, BitcoinUnits::separatorAlways);
+    QString strAnonymizeCteamAmount = BitcoinUnits::formatHtmlWithUnit(nDisplayUnit, nAnonymizeCoinAmount * COIN, false, BitcoinUnits::separatorAlways);
 
     if (currentBalance == 0) {
         ui->obfuscationProgress->setValue(0);
@@ -344,11 +344,11 @@ void OverviewPage::updateObfuscationProgress()
     CAmount nMaxToAnonymize = nAnonymizableBalance + currentAnonymizedBalance + nDenominatedUnconfirmedBalance;
 
     // If it's more than the anon threshold, limit to that.
-    if (nMaxToAnonymize > nAnonymizeCteamAmount * COIN) nMaxToAnonymize = nAnonymizeCteamAmount * COIN;
+    if (nMaxToAnonymize > nAnonymizeCoinAmount * COIN) nMaxToAnonymize = nAnonymizeCoinAmount * COIN;
 
     if (nMaxToAnonymize == 0) return;
 
-    if (nMaxToAnonymize >= nAnonymizeCteamAmount * COIN) {
+    if (nMaxToAnonymize >= nAnonymizeCoinAmount * COIN) {
         ui->labelAmountRounds->setToolTip(tr("Found enough compatible inputs to anonymize %1")
                                               .arg(strAnonymizeCteamAmount));
         strAnonymizeCteamAmount = strAnonymizeCteamAmount.remove(strAnonymizeCteamAmount.indexOf("."), BitcoinUnits::decimals(nDisplayUnit) + 1);
@@ -528,7 +528,7 @@ void OverviewPage::toggleObfuscation()
 
         /* show obfuscation configuration if client has defaults set */
 
-        if (nAnonymizeCteamAmount == 0) {
+        if (nAnonymizeCoinAmount == 0) {
             ObfuscationConfig dlg(this);
             dlg.setModel(walletModel);
             dlg.exec();

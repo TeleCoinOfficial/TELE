@@ -145,7 +145,7 @@ public:
         nMinerThreads = 0;
         nTargetTimespan = 1 * 60;
         nTargetSpacing = 1 * 60;
-        nLastPOWBlock = 10000; // Extended PoW phase to help set up the network
+        nLastPOWBlock = 1000; // Extended PoW phase to help set up the network
         nMaturity = 100;
         nMasternodeCountDrift = 20;
         nModifierUpdateBlock = 0;

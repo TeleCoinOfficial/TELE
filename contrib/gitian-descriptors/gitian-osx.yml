@@ -1,5 +1,5 @@
 ---
-name: "tele-osx-1.0.0.0"
+name: "tele-osx-1.0.0"
 enable_cache: true
 suites:
 - "trusty"

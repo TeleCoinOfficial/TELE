@@ -209,8 +209,8 @@ public:
 
         nPoolMaxTransactions = 3;
 
-        strSporkKey = "0464f9fcf86f669cb57478dea66105f945b03228d2b9eaffb202cbcae0d55987422242fd5b3604525735fdffa379aa2884fa47e964476004e7a236aaaa36aad180";
-        strObfuscationPoolDummyAddress = "D87q2gC9j6nNrnzCsg4aY6bHMLsT9nUhEw";
+        strSporkPubKey = "04bcba1d11b6f67464bc98f5b800874d5609686156539fa3e7d160de33c76e0927b79c7c10a7c2931d74b200ea22e502151b5a107de2dc2100cc51de19354a9b18";
+        strObfuscationPoolDummyAddress = "1HcMTVpwHvcNGoNcsJ2EMyJRHXjZLbr6Wx";
         nStartMasternodePayments = fGenTime;
     }
 
@@ -283,7 +283,7 @@ public:
         fTestnetToBeDeprecatedFieldRPC = true;
 
         nPoolMaxTransactions = 2;
-        strSporkKey = "0464f9fcf86f669cb57478dea66105f945b03228d2b9eaffb202cbcae0d55987422242fd5b3604525735fdffa379aa2884fa47e964476004e7a236aaaa36aad180";
+        strSporkPubKey = "04bcba1d11b6f67464bc98f5b800874d5609686156539fa3e7d160de33c76e0927b79c7c10a7c2931d74b200ea22e502151b5a107de2dc2100cc51de19354a9b18";
         strObfuscationPoolDummyAddress = "y57cqfGRkekRyDRNeJiLtYVEbvhXrNbmox";
         nStartMasternodePayments = fGenTime;
     }

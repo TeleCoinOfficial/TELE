@@ -413,7 +413,7 @@ std::string HelpMessage(HelpMessageMode mode)
         strUsage += HelpMessageOpt("-fuzzmessagestest=<n>", _("Randomly fuzz 1 of every <n> network messages"));
         strUsage += HelpMessageOpt("-flushwallet", strprintf(_("Run a thread to flush wallet periodically (default: %u)"), 1));
         strUsage += HelpMessageOpt("-stopafterblockimport", strprintf(_("Stop running after importing blocks from disk (default: %u)"), 0));
-        strUsage += HelpMessageOpt("-sporkkey=<privkey>", _("Enable spork administration functionality with the appropriate private key."));
+        strUsage += HelpMessageOpt("-sporkprivkey=<privkey>", _("Enable spork administration functionality with the appropriate private key."));
     }
     string debugCategories = "addrman, alert, bench, coindb, db, lock, rand, rpc, selectcoins, mempool, net, tele, (obfuscation, swifttx, masternode, mnpayments, mnbudget)"; // Don't translate these and qt below
     if (mode == HMM_BITCOIN_QT)
@@ -934,9 +934,9 @@ bool AppInit2(boost::thread_group& threadGroup)
             threadGroup.create_thread(&ThreadScriptCheck);
     }
 
-    if (mapArgs.count("-sporkkey")) // spork priv key
+    if (mapArgs.count("-sporkprivkey")) // spork priv key
     {
-        if (!sporkManager.SetPrivKey(GetArg("-sporkkey", "")))
+        if (!sporkManager.SetPrivKey(GetArg("-sporkprivkey", "")))
             return InitError(_("Unable to sign spork message, wrong key?"));
     }
 

@@ -213,7 +213,7 @@ void OptionsDialog::setMapper()
 
     /* Obfuscation Rounds */
     mapper->addMapping(ui->obfuscationRounds, OptionsModel::ObfuscationRounds);
-    mapper->addMapping(ui->AnonymizeCteam, OptionsModel::AnonymizeCteamAmount);
+    mapper->addMapping(ui->AnonymizeCoins, OptionsModel::AnonymizeCoinsAmount);
     mapper->addMapping(ui->showMasternodesTab, OptionsModel::ShowMasternodesTab);
 }
 

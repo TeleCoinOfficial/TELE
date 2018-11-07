@@ -227,7 +227,7 @@ QVariant OptionsModel::data(const QModelIndex& index, int role) const
             return settings.value("nThreadsScriptVerif");
         case ObfuscationRounds:
             return QVariant(nObfuscationRounds);
-        case AnonymizeCteamAmount:
+        case AnonymizeCoinsAmount:
             return QVariant(nAnonymizeCoinAmount);
         case Listen:
             return settings.value("fListen");
@@ -337,10 +337,10 @@ bool OptionsModel::setData(const QModelIndex& index, const QVariant& value, int 
             settings.setValue("nObfuscationRounds", nObfuscationRounds);
             emit obfuscationRoundsChanged(nObfuscationRounds);
             break;
-        case AnonymizeCteamAmount:
+        case AnonymizeCoinsAmount:
             nAnonymizeCoinAmount = value.toInt();
             settings.setValue("nAnonymizeCoinAmount", nAnonymizeCoinAmount);
-            emit AnonymizeCteamAmountChanged(nAnonymizeCoinAmount);
+            emit AnonymizeCoinsAmountChanged(nAnonymizeCoinAmount);
             break;
         case CoinControlFeatures:
             fCoinControlFeatures = value.toBool();

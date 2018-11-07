@@ -182,7 +182,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="AnonymizeCteam">
+          <widget class="QSpinBox" name="AnonymizeCoins">
            <property name="minimum">
             <number>100</number>
            </property>

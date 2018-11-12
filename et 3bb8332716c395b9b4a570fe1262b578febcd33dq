@@ -1,0 +1,371 @@
+[33mcommit 3bb8332716c395b9b4a570fe1262b578febcd33d[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Mon Nov 12 12:36:32 2018 +0000
+
+    new Spork Pubkey + inital chain size def
+
+[33mcommit d47507f35e870f5212c8bb1c1b64111e299203e4[m[33m ([m[1;33mtag: v1.0.0.8-beta[m[33m)[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Wed Nov 7 21:31:54 2018 +0000
+
+    legacy naming
+
+[33mcommit d73fad61adfd612083e37eba56697534fa62fa42[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Wed Nov 7 21:18:56 2018 +0000
+
+    Mac ICNS file
+
+[33mcommit 713c53a9eb6c9b2de2a17d935c2008065341b8f8[m[33m ([m[1;33mtag: v1.0.0.7-beta[m[33m)[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Mon Oct 29 19:53:31 2018 +0000
+
+    depends - update fontconfig version to 2.12.1
+
+[33mcommit ef66bf0cf1b35d1a07a3d6fa702d783d86369d17[m[33m ([m[1;33mtag: v1.0.0.6-beta[m[33m)[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Thu Oct 18 00:10:51 2018 +0100
+
+    rationalise sporkkey naming
+
+[33mcommit 80e7526bf6b6a77af65a0b68bdfb90dfa3b09189[m[33m ([m[1;33mtag: v1.0.0.5-beta[m[33m)[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Wed Oct 17 22:15:40 2018 +0100
+
+    bump version to 1.0.0.5-beta
+
+[33mcommit 24d7836ec23cf934fdbf9ffa894a8f34dbeed182[m
+Author: M 2 <mammix2@users.noreply.github.com>
+Date:   Wed Oct 17 22:10:57 2018 +0100
+
+    remove Makefile
+
+[33mcommit aa089e9652ecbe65efe04691684513a870d5d360[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Wed Oct 17 18:44:03 2018 +0100
+
+    reduce PoW blocks - gitian descriptors update
+
+[33mcommit e4232118856569c5b11f2d405e52a68555e51b9d[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Wed Oct 17 01:10:05 2018 +0100
+
+    masternode.conf formatting
+
+[33mcommit 0b6e8a9899edb225d8431d55c9414da1fa7b5aa9[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Wed Oct 17 00:27:20 2018 +0100
+
+    re-name TCP port strings
+
+[33mcommit 7a0ba2086b6aa766b96d0b5bbbe0963109b9ff5c[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Tue Oct 16 23:53:24 2018 +0100
+
+    string re-naming
+
+[33mcommit 2adfefd4b6b88ded3181234375002d75aae4deea[m[33m ([m[1;33mtag: v1.0.0.2-beta[m[33m)[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Tue Oct 16 21:51:52 2018 +0100
+
+    build version - build test
+
+[33mcommit 8163879bcdb9b68b36af769e2f553d8566738438[m[33m ([m[1;33mtag: v1.0.0.1-beta[m[33m)[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Tue Oct 16 20:34:09 2018 +0100
+
+    enable PoW - PoS crossover during setup
+
+[33mcommit 420de51da620bfcc1b60c3c742a33647ec593b3a[m[33m ([m[1;33mtag: v1.0.0.0-beta[m[33m)[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Thu Oct 11 22:09:30 2018 +0100
+
+    gitian build descriptors
+
+[33mcommit 414c2be71d1d31dfe8eeb97ec740720cbd8a6429[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Thu Oct 11 21:40:06 2018 +0100
+
+    gitian build params
+
+[33mcommit be8d4c835e0828211fbb219483a978b7ee768d8b[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Wed Oct 10 19:12:58 2018 +0100
+
+    .gitignore
+
+[33mcommit c76ac7d98575e6327364f768d8eaed6796f8d278[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Wed Oct 10 19:11:36 2018 +0100
+
+    .gitignore
+
+[33mcommit 06a0cbfb8858c93f38d49e1263e6c9eea396d720[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Wed Oct 10 19:10:58 2018 +0100
+
+    .gitignore
+
+[33mcommit fa3a98135c7f61f095940fcdf99cef15def24523[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Wed Oct 10 19:08:24 2018 +0100
+
+    spork signature verifications
+
+[33mcommit ba5e692a7dfcc73be6c106f62bcdd409025cb47d[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Wed Jul 4 23:56:37 2018 +0100
+
+    Add -resync function in GUI
+
+[33mcommit 18413760a4cad4f7bf19bb148de9d94a1f54b066[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Wed Jul 4 23:25:14 2018 +0100
+
+    Remove Makefile
+
+[33mcommit c2bb008baeb8fe86da949aa5cb44a8fb48956fc6[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Wed Jul 4 23:24:18 2018 +0100
+
+    enable PoW checks
+
+[33mcommit 0f969460c476acfaa28127864467295ddb2ef9a3[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Wed Jul 4 23:20:47 2018 +0100
+
+    add new features
+
+[33mcommit a0e0a6f6359842151c013bfaa8d86846093fdbbd[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Tue Jul 3 18:21:09 2018 +0100
+
+    update .gitignore
+
+[33mcommit b528121201e18c9d9557941fc9dd71a37d04c069[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Tue Jul 3 18:17:55 2018 +0100
+
+    cleanup file
+
+[33mcommit a38bd24f13367a91d33041619b7d43b025099fe9[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Thu May 31 20:45:22 2018 +0100
+
+    MN specs, GUI control
+
+[33mcommit 32030d33d7405c8afbb3e2f03d8e0180eb8ca4e6[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Wed May 30 19:16:44 2018 +0100
+
+    temp seed address
+
+[33mcommit 49c50ad7182e2521018b81bf7cfefe0756a84c83[m[33m ([m[1;33mtag: v1.0.0.1[m[33m)[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Wed May 30 18:01:26 2018 +0100
+
+    missing ref
+
+[33mcommit cfb6c93b19d5e720fc1193aef6bb36daa59e5533[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Wed May 30 17:57:18 2018 +0100
+
+    Staking infinite loop fix
+
+[33mcommit e5b47ae5acc92ed8ee69d2bc03cc0668ffac389f[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Tue May 1 20:55:24 2018 +0100
+
+    update readme
+
+[33mcommit 3e172e3b43c501edb821d4c38364ee19e7f60556[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Tue May 1 20:15:53 2018 +0100
+
+    new genesis again
+
+[33mcommit 690ada791b7fbff152d5149633f5027095c8862b[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Tue May 1 19:57:57 2018 +0100
+
+    new genesis
+
+[33mcommit a2f3777f69092ca631eede4e293b1b7a9c3b95b0[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Tue May 1 19:28:45 2018 +0100
+
+    new keys
+
+[33mcommit 52619cc4e4b18e85ede4cd74873843417a67063f[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Tue May 1 19:07:54 2018 +0100
+
+    updates
+
+[33mcommit 7d4bb7bc166d788881c6a95ddf0e200c43c416e8[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Wed Apr 25 09:00:21 2018 +0100
+
+    styles
+
+[33mcommit b320ed2169b8c71571bbdc1a7a4ab1d781c77226[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Wed Apr 25 08:35:43 2018 +0100
+
+    styles
+
+[33mcommit f2cb02a38e09bf6356bbf212e0c0ec2200c9ed89[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Tue Apr 24 23:01:15 2018 +0100
+
+    PUBKEY_ADDRESS prefix
+
+[33mcommit 3a12d16cd938e5b5ce87a5fd74d2900e80b0a689[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Tue Apr 24 22:49:57 2018 +0100
+
+    PUBKEY_ADDRESS prefix
+
+[33mcommit c112db5e71dc1c060ea37d51b946feeffa023ad3[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Tue Apr 24 22:48:01 2018 +0100
+
+    PUBKEY_ADDRESS prefix
+
+[33mcommit 0cd4b206e75b319509b3de9c9761c43310d737a4[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Tue Apr 24 22:45:30 2018 +0100
+
+    PUBKEY_ADDRESS prefix
+
+[33mcommit a478d9cbf25497a905634680676b8291aba78845[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Tue Apr 24 22:42:27 2018 +0100
+
+    PUBKEY_ADDRESS prefix
+
+[33mcommit d9418db071db66d988f6d818c23a322af2164718[m[33m ([m[1;33mtag: v1.0.0.0[m[33m)[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Tue Apr 24 22:28:05 2018 +0100
+
+    align more with BTC GUI
+
+[33mcommit 1098d294eff1bfcfebe341bf366d1abe6a1b5eb7[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Tue Apr 24 22:06:07 2018 +0100
+
+    data directory case
+
+[33mcommit 8ea2975b59cc66f669163eabef01a591a355bef6[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Tue Apr 24 22:02:02 2018 +0100
+
+    move data directory
+
+[33mcommit a1f891d728d3fbfb432e57361fbc35c86c5cdb85[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Tue Apr 24 21:56:17 2018 +0100
+
+    config
+
+[33mcommit 3f369d49037c833b04f5a5da8fec48e7ac631423[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Tue Apr 24 21:44:25 2018 +0100
+
+    copyright year
+
+[33mcommit 426bf213bf1d9ed9b256f438b56f74fd5d3dc54c[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Tue Apr 24 21:38:18 2018 +0100
+
+    cleanup
+
+[33mcommit bbc0dd9aca85879cf0873a65fd8e7a993f6be858[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Tue Apr 24 21:37:24 2018 +0100
+
+    copyright year
+
+[33mcommit f8ebc90830f2487a58d107c9f6b99aec5ed2e0d9[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Tue Apr 24 21:23:24 2018 +0100
+
+    splash size
+
+[33mcommit 462ba527cc3b7d3c7a68b735cbee526546b7c195[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Tue Apr 24 21:20:10 2018 +0100
+
+    fonts
+
+[33mcommit 5d1b8e849bd2af58f532acb01121621fafa2ecf1[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Tue Apr 24 21:17:11 2018 +0100
+
+    copyrights
+
+[33mcommit 1f3674cf0eba1b41a5f7bbbd25adfd9b1c213b43[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Tue Apr 24 21:12:02 2018 +0100
+
+    icons
+
+[33mcommit 9e21bad704ba24b5303a04832082d7fde1e432c3[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Tue Apr 24 21:07:38 2018 +0100
+
+    branding
+
+[33mcommit 647f816e40b2ffd27f5af308de1b513b793f15b3[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Tue Apr 24 21:01:53 2018 +0100
+
+    branding
+
+[33mcommit 6d24bd91eb48749b25e02c7676773955213ae217[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Tue Apr 24 20:49:36 2018 +0100
+
+    pixmaps
+
+[33mcommit db1cddc23cbdbfd6b13e7bafaedd9589a80d855c[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Tue Apr 24 20:48:15 2018 +0100
+
+    pixmaps
+
+[33mcommit e89c1a2059cbab5d60075104878bf6f4be5f710c[m
+Author: mammix2@hotmail.com <mammix2@hotmail.com>
+Date:   Tue Apr 24 20:42:10 2018 +0100
+
+    genesis
+
+[33mcommit 14e15ad9af7c42566f2a41bd692395a369c1b4f9[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Tue Apr 24 20:28:45 2018 +0100
+
+    rewards
+
+[33mcommit 7f7ae6868377810e2eadd80994a7df66855e8265[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Tue Apr 24 20:25:38 2018 +0100
+
+    rewards
+
+[33mcommit cabcf5e7f43eb01f67a2e8de8593e622b26e49fd[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Tue Apr 24 20:22:17 2018 +0100
+
+    rewards
+
+[33mcommit f8aa622374651ab3efb8e0376b2729bec14980ce[m
+Author: mammix2@hotmail.com <mammix2@hotmail.com>
+Date:   Tue Apr 24 20:13:59 2018 +0100
+
+    permissions
+
+[33mcommit 2d092a6154b1e25238161eedff9173f2b2acd37b[m
+Author: mammix2 <mammix2@hotmail.com>
+Date:   Tue Apr 24 20:10:05 2018 +0100
+
+    testing

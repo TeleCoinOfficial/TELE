@@ -189,7 +189,7 @@ public:
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 66);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 85);
-        base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 153);
+        base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 128);
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(17)(76)(58)(103).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(17)(7)(6)(26).convert_to_container<std::vector<unsigned char> >();
         // 	BIP44 coin type is from https://github.com/satoshilabs/slips/blob/master/slip-0044.md
@@ -209,8 +209,8 @@ public:
 
         nPoolMaxTransactions = 3;
 
-        strSporkPubKey = "0464f9fcf86f669cb57478dea66105f945b03228d2b9eaffb202cbcae0d55987422242fd5b3604525735fdffa379aa2884fa47e964476004e7a236aaaa36aad180";
-        strObfuscationPoolDummyAddress = "1HcMTVpwHvcNGoNcsJ2EMyJRHXjZLbr6Wx";
+        strSporkPubKey = "045F64A93F8D210B95F23CE59DC6D301D8F2973E6BB37152DF091BD0B6822CEC9D93E511DE6D437D25E12FB4FF2C35508B92F14FFD9323F3E89E876D511CE2B8BF";
+        strObfuscationPoolDummyAddress = "ThrqmpofzM9JFFVgbCzzrjRCZhwgYVZqTd";
         nStartMasternodePayments = fGenTime;
     }
 
@@ -264,7 +264,7 @@ public:
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 8); // Testnet tele addresses start with 'x' or 'y'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 133);  // Testnet tele script addresses start with '8' or '9'
-        base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 127);     // Testnet private keys start with '9' or 'c' (Bitcoin defaults)
+        base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 233);     // Testnet private keys start with '9' or 'c' (Bitcoin defaults)
          // Testnet tele BIP32 pubkeys start with 'DRKV'
          base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(177)(60)(206)(172).convert_to_container<std::vector<unsigned char> >();
          // Testnet tele BIP32 prvkeys start with 'DRKP'
@@ -283,8 +283,8 @@ public:
         fTestnetToBeDeprecatedFieldRPC = true;
 
         nPoolMaxTransactions = 2;
-        strSporkPubKey = "0464f9fcf86f669cb57478dea66105f945b03228d2b9eaffb202cbcae0d55987422242fd5b3604525735fdffa379aa2884fa47e964476004e7a236aaaa36aad180";
-        strObfuscationPoolDummyAddress = "y57cqfGRkekRyDRNeJiLtYVEbvhXrNbmox";
+        strSporkPubKey = "04301CF4C54ED7AD7F2FDD6AFC089A0B5A8ADC31AF66A631B786F73CF9B2DB9A4994FC34A17AA03BA58573324324E35ED4DD902096090F25025CC5D09E71A552BB";
+        strObfuscationPoolDummyAddress = "4TehAVqTU46LZv2gxcE7HezizF59q3L1gX";
         nStartMasternodePayments = fGenTime;
     }
     const Checkpoints::CCheckpointData& Checkpoints() const

@@ -3,7 +3,7 @@ TELE
 
 Setup
 ---------------------
-[TELE](http://www.Tele.team /wallet) is the original TELE client and it builds the backbone of the network. However, it downloads and stores the entire history of TELE transactions; depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
+[TELE](http://www.telecoin.info /wallet) is the original TELE client and it builds the backbone of the network. However, it downloads and stores the entire history of TELE transactions; depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
 
 Running
 ---------------------
@@ -28,8 +28,8 @@ Drag tele-Qt to your applications folder, and then run tele-Qt.
 
 * See the documentation at the [TELE Wiki](https://en.bitcoin.it/wiki/Main_Page) ***TODO***
 for help and more information.
-* Ask for help on [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or on the [TELE Forum](http://forum.www.Tele.team /).
-* Join one of our Slack groups [TELE Slack Groups](https://www.Tele.team /slack-logins/).
+* Ask for help on [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or on the [TELE Forum](http://forum.www.telecoin.info /).
+* Join one of our Slack groups [TELE Slack Groups](https://www.telecoin.info /slack-logins/).
 
 Building
 ---------------------
@@ -55,7 +55,7 @@ The tele repo's [root README](https://github.com/mammix2/tele/tele/blob/master/R
 
 ### Resources
 
-* Discuss on the [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or the [TELE](http://forum.www.Tele.team /) forum.
+* Discuss on the [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or the [TELE](http://forum.www.telecoin.info /) forum.
 * Join the [tele-Dev](https://tele-dev.slack.com/) Slack group ([Sign-Up](https://tele-dev.herokuapp.com/)).
 
 ### Miscellaneous

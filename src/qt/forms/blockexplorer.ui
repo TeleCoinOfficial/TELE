@@ -22,8 +22,11 @@
       </property>
       <item>
        <widget class="QPushButton" name="back">
+        <property name="toolTip">
+         <string>Go back through your searches</string>
+        </property>
         <property name="text">
-         <string/>
+         <string>&lt;</string>
         </property>
         <property name="icon">
          <iconset>
@@ -36,8 +39,11 @@
       </item>
       <item>
        <widget class="QPushButton" name="forward">
+        <property name="toolTip">
+         <string>Go forward through your searches</string>
+        </property>
         <property name="text">
-         <string/>
+         <string>&gt;</string>
         </property>
         <property name="icon">
          <iconset>

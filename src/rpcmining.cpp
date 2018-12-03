@@ -19,6 +19,7 @@
 #ifdef ENABLE_WALLET
 #include "db.h"
 #include "wallet.h"
+#include "spork.h"
 #endif
 
 #include <stdint.h>
@@ -134,6 +135,13 @@ Value setgenerate(const Array& params, bool fHelp)
 
     if (pwalletMain == NULL)
         throw JSONRPCError(RPC_METHOD_NOT_FOUND, "Method not found (disabled)");
+
+    if (pindexBestHeader->nHeight > Params().LAST_POW_BLOCK()) {
+        if (!IsSporkActive(SPORK_17_POW_ENABLER)) {
+            LogPrintf("setgenerate: failed because SPORK_17_POW_ENABLER is false\n");
+            return false;
+        }
+    }
 
     bool fGenerate = true;
     if (params.size() > 0)

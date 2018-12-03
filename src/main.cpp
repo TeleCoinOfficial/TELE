@@ -2048,9 +2048,13 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
         return true;
     }
 
-    if (pindex->nHeight > Params().LAST_POW_BLOCK() && block.IsProofOfWork())
-        return state.DoS(100, error("ConnectBlock() : PoW period ended"),
-            REJECT_INVALID, "PoW-ended");
+    if (pindex->nHeight > Params().LAST_POW_BLOCK() && block.IsProofOfWork()) {
+        if (!IsSporkActive(SPORK_17_POW_ENABLER)) {
+            return state.DoS(100, error("ConnectBlock() : PoW period ended"), REJECT_INVALID, "PoW-ended");
+            LogPrintf("ConnectBlock() : PoW period ended\n");
+        }
+
+    }
 
     bool fScriptChecks = pindex->nHeight >= Checkpoints::GetTotalBlocksEstimate();
 
